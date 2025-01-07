@@ -23,7 +23,7 @@ public class SearchService {
     }
 
     public Collection<ProductItem> search(String query) {
-        return Collections.emptyList();
+
         /*
          * This is a simple implementation that loops over all the items and does the filtering in Java.
          * A better implementation would do most if not all of the filtering in a query and then finalize or
@@ -73,6 +73,7 @@ public class SearchService {
             }
         }
         // Return results
-        return itemList;
+        //return itemList;
+        return Collections.emptyList();
     }
 }
