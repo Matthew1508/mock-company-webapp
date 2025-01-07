@@ -23,8 +23,8 @@ jobs:
 
       # Step 3: Build the project
       - name: Build the project
-        run: gradlew.bat assemble
+        run: .\gradlew assemble
 
       # Step 4: Run the tests
       - name: Run tests
-        run: gradlew.bat test
+        run: .\gradlew test
