@@ -1,26 +1,30 @@
-name: CI Pipeline
+name: CI Pipeline  # Name of the workflow
 
 on:
   push:
     branches:
       - main
-      - master
 
 jobs:
   build-and-test:
-    runs-on: windows-latest
+    runs-on: windows-latest  # Use the latest Windows environment
     
     steps:
+      # Step 1: Check out the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Set up Java Development Kit (JDK) version 11
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'temurin'  # Specify the JDK distribution
 
+      # Step 3: Build the project
       - name: Build the project
         run: gradlew.bat assemble
 
+      # Step 4: Run the tests
       - name: Run tests
         run: gradlew.bat test
