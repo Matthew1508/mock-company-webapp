@@ -22,10 +22,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'  # Specify the JDK distribution
 
-      # Step 3: Build the project
-      - name: Build the project
-        run: .\gradlew assemble
-
-      # Step 4: Run the tests
+      # Step 3: Run the tests
       - name: Run tests
         run: .\gradlew test
